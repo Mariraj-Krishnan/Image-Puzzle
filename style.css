@@ -109,5 +109,5 @@ img {
 }
 img.active {
   position: absolute;
-  width: 276px;
+  width: 100%;
 }
