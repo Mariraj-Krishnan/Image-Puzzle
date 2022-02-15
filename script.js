@@ -74,8 +74,8 @@ function mouseMoveHandler(el) {
     checkForEnd();
   }
 }
-pieceElements.forEach((el) => {
-  el.onmousedown = function () {
-    el.addEventListener("mousemove", mouseMoveHandler(el));
+pieceElements.forEach((piece) => {
+  piece.onclick = function () {
+    mouseMoveHandler(piece);
   };
 });
