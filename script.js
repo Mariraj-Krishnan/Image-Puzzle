@@ -8,6 +8,17 @@ const pos = [1, 2, 3, 4, 5, 6, 7, 8];
 pos.sort(function (a, b) {
   return 0.5 - Math.random();
 });
+while (getInvCount(pos) % 2) {
+  pos.sort(function (a, b) {
+    return 0.5 - Math.random();
+  });
+}
+function getInvCount(posArray) {
+  let inv_count = 0;
+  for (let i = 0; i < 7; i++)
+    for (let j = i + 1; j < 8; j++) if (posArray[i] > posArray[j]) inv_count++;
+  return inv_count;
+}
 const pieceArray = [];
 const pieceElements = [];
 let emptyPos = 9;
